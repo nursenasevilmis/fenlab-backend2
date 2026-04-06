@@ -8,7 +8,7 @@ WORKDIR /app
 # Copy Gradle files
 COPY build.gradle.kts settings.gradle.kts gradlew ./
 COPY gradle ./gradle
-
+RUN chmod +x gradlew
 # Download dependencies
 RUN ./gradlew dependencies --no-daemon
 
